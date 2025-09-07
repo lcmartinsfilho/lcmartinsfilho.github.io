@@ -1,49 +1,51 @@
 ---
-title: "Luiz Martins"
-description: "Senior Software Engineer | SRE | Full-Stack | Rust Enthusiast"
+title: "Luiz Carlos Martins Filho"
+description: "Software Engineer | Rust & OS Learner | Open Source Collaborator"
 date: 2025-09-07T00:00:00Z
 draft: false
-
-# Params for re-terminal theme (adjust depending on theme docs)
-showRecentPosts: true
-showProjects: true
-showContact: true
 ---
 
-# 👋 Hi, I’m Luiz
+# 👋 Hi, I’m Luiz Martins
 
-I’m a **Senior Software Engineer** specialized in **Site Reliability Engineering (SRE)** and backend systems, with a growing focus on **full-stack development** (React, Next.js, GraphQL, mobile-first design).  
-I thrive on building **resilient infrastructure**, **elegant code**, and exploring the cutting edge of **Rust** for systems and developer tooling.
+Based in **Maringá, Paraná, Brazil**.  
+I’m interested in programming (kinda obvious), but also in almost everything tech and science related.
 
----
-
-## 🛠️ Tech Focus
-- **Backend & Reliability**: Node.js, distributed systems, CI/CD pipelines, observability
-- **Full-Stack**: React, Next.js, GraphQL, responsive design
-- **DevOps & Infra**: FreeBSD/Linux, GitLab, Terraform/OpenTofu, Helm, ArgoCD
-- **Polyglot & Curious**: Rust, Python, Bash scripting
+**Currently learning:** Rust and Operating Systems.  
+**Looking to collaborate** on open-source initiatives as a means to improve my coding skills.
 
 ---
 
-## 🚀 Highlights
-- Led SRE initiatives improving service reliability & developer productivity  
-- Designed full CI/CD workflows with GitLab, Terraform, Helm, ArgoCD  
-- Exploring Rust for Linux/FreeBSD utilities and JS/C tool translation  
-- Passionate about **open source**, **self-hosting**, and community contributions  
+## 🛠️ Projects & Contributions
+
+Some highlights from my repositories:
+
+- **Project-Based-Tutorials-in-C** → Curated list of project-based tutorials in C  
+- **eng-practices** → Forked from Google’s engineering practices documentation  
+- **thebook-rust** → Repository with Rust content  
+- **loxr** → Interpreter for the Lox language written in Rust  
+- **MCSC1** → Computational systems complexity course materials  
+- **ICMC-USP** → Course-related repositories from ICMC-USP  
+
+🔗 More on my [GitHub](https://github.com/lcmartinsfilho)
 
 ---
 
-## 📂 Sections
-- [Blog](/blog/) → Articles on software engineering, SRE, Rust, and more  
-- [Projects](/projects/) → Open-source work, personal builds, and experiments  
-- [About](/about/) → My journey, philosophy, and growth mindset  
+## ✍️ Blog
+
+This space will host my notes and reflections on programming, Rust, and operating systems.  
+*(Content coming soon)*
+
+---
+
+## 🙋 About
+
+I’m Luiz Carlos Martins Filho, passionate about coding, technology, and science.  
+Learning Rust and OS internals while seeking opportunities to grow through open-source collaboration.
 
 ---
 
 ## 📬 Contact
-Want to collaborate or just say hi?  
-- [LinkedIn](https://linkedin.com/in/yourprofile)  
-- [GitHub](https://github.com/yourusername)  
-- Email: `you@example.com`  
 
----
+- GitHub: [@lcmartinsfilho](https://github.com/lcmartinsfilho)  
+- LinkedIn: [in/lcmartinsfilho](https://www.linkedin.com/in/lcmartinsfilho/)  
+- Email: `lcmf[at]pm.me`
