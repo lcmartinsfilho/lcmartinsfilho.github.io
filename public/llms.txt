@@ -1,0 +1,9 @@
+# My Hextra Site
+
+> A modern documentation site built with Hugo and Hextra
+
+
+
+---
+Generated on 2026-01-26 23:21:31 UTC
+Site: http://localhost:1313/

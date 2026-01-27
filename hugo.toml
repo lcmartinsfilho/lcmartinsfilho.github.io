@@ -1,9 +1,329 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+# ============================================================================
+# CORE HUGO CONFIGURATION
+# ============================================================================
 
-theme = "re-terminal"
+# Basic site settings
+baseURL = "https://example.com/"
+title = "My Hextra Site"
+languageCode = "en-us"
+defaultContentLanguage = "en"
 
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+# Theme configuration
+# Use Hugo Modules approach (recommended)
+[module]
+  [[module.imports]]
+    path = "github.com/imfing/hextra"
+
+# Alternatively, if using traditional theme folder:
+# theme = "hextra"
+
+# Enable Git info for last modification dates
+enableGitInfo = true
+
+# Enable emoji support in content
+enableEmoji = true
+
+# Enable robots.txt generation
+enableRobotsTXT = true
+
+# ============================================================================
+# OUTPUT FORMATS
+# ============================================================================
+
+[outputs]
+  home = ["html", "rss", "llms"]  # llms.txt for AI agents
+  page = ["html"]
+  section = ["html", "rss"]
+
+# ============================================================================
+# MARKUP CONFIGURATION
+# ============================================================================
+
+[markup]
+  # Goldmark (Markdown) settings
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in markdown
+  
+  # Syntax highlighting
+  [markup.highlight]
+    noClasses = false  # Use CSS classes for highlighting (theme's default)
+    lineNos = false
+    lineNumbersInTable = false
+    codeFences = true
+
+  # Table of contents
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+
+# ============================================================================
+# MENU CONFIGURATION
+# ============================================================================
+
+# Main navigation (top-right menu)
+[[menu.main]]
+  name = "Documentation"
+  pageRef = "/docs"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  pageRef = "/blog"
+  weight = 2
+
+[[menu.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 3
+
+[[menu.main]]
+  name = "Search"
+  weight = 4
+  [menu.main.params]
+    type = "search"
+
+[[menu.main]]
+  name = "GitHub"
+  url = "https://github.com/username/repo"
+  weight = 5
+  [menu.main.params]
+    icon = "github"
+
+# Optional: Theme toggle in menu
+# [[menu.main]]
+#   name = "Theme Toggle"
+#   weight = 6
+#   [menu.main.params]
+#     type = "theme-toggle"
+#     label = true
+
+# Optional: Language switcher (for multilingual sites)
+# [[menu.main]]
+#   name = "Language"
+#   weight = 7
+#   [menu.main.params]
+#     type = "language-switch"
+#     label = true
+#     icon = "globe-alt"
+
+# Sidebar extra links
+[[menu.sidebar]]
+  name = "More"
+  weight = 1
+  [menu.sidebar.params]
+    type = "separator"
+
+[[menu.sidebar]]
+  name = "About"
+  pageRef = "/about"
+  weight = 2
+
+[[menu.sidebar]]
+  name = "Hugo Docs ↗"
+  url = "https://gohugo.io/documentation/"
+  weight = 3
+
+# ============================================================================
+# SERVICES INTEGRATION
+# ============================================================================
+
+[services]
+  # Google Analytics
+  [services.googleAnalytics]
+    ID = "G-MEASUREMENT_ID"  # Replace with your GA4 ID
+
+# ============================================================================
+# THEME PARAMETERS
+# ============================================================================
+
+[params]
+  # Site description (for SEO)
+  description = "A modern documentation site built with Hugo and Hextra"
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # NAVBAR CONFIGURATION
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.navbar]
+    displayTitle = true
+    displayLogo = true
+    # full (100%), wide (90rem), normal (1280px)
+    width = "normal"
+    
+    [params.navbar.logo]
+      path = "images/logo.svg"
+      dark = "images/logo-dark.svg"  # Optional dark mode logo
+      link = "/"
+      width = 40
+      height = 20
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # PAGE CONFIGURATION
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.page]
+    # Page width: full (100%), wide (90rem), normal (1280px)
+    width = "normal"
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # THEME APPEARANCE
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.theme]
+    # Default theme: light | dark | system
+    default = "system"
+    # Display theme toggle button
+    displayToggle = true
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # FOOTER CONFIGURATION
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.footer]
+    # Footer width: full | wide | normal
+    width = "normal"
+    # Enable footer
+    enable = true
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # EDIT LINK CONFIGURATION
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.editURL]
+    enable = true
+    base = "https://github.com/username/repo/edit/main"
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # SEARCH CONFIGURATION
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.search]
+    enable = true
+    type = "flexsearch"
+    
+    [params.search.flexsearch]
+      # Index strategy: content | summary | heading | title
+      index = "content"
+      # Tokenize strategy: full | forward | reverse | strict
+      tokenize = "forward"
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # BLOG CONFIGURATION
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.blog]
+    [params.blog.list]
+      displayTags = true
+      # Number of posts per page
+      # paginate = 10
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # TABLE OF CONTENTS
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.toc]
+    displayTags = true
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # DATE DISPLAY
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  # Display last updated date (requires enableGitInfo = true)
+  displayUpdatedDate = true
+  # Date format (Hugo time.Format layout)
+  dateFormat = "January 2, 2006"
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # OPEN GRAPH (Social Media)
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  images = ["/images/og-image.jpg"]
+  # audio = "podcast.mp3"
+  # videos = ["video.mp4"]
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # BANNER (Site-wide announcement)
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  # [params.banner]
+  #   key = "announcement-1"
+  #   message = "🎉 Welcome! Check out our [latest updates](/blog)."
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # EXTERNAL LINKS
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  # Add arrow icon to external links
+  externalLinkDecoration = true
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # ANALYTICS
+  # ──────────────────────────────────────────────────────────────────────────
+  
+  [params.analytics]
+    # Umami Analytics
+    # [params.analytics.umami]
+    #   serverURL = "https://analytics.example.com"
+    #   websiteID = "your-website-id"
+    #   scriptName = "umami.js"
+    
+    # Matomo Analytics
+    # [params.analytics.matomo]
+    #   serverURL = "https://matomo.example.com"
+    #   websiteID = "1"
+
+# ============================================================================
+# BUILD CONFIGURATION (Optional - for development)
+# ============================================================================
+
+# [build]
+#   [build.buildStats]
+#     enable = true
+#     disableIDs = true
+#   
+#   # Cache busters for theme development
+#   [[build.cachebusters]]
+#     source = 'assets/watching/hugo_stats\.json'
+#     target = 'styles\.css'
+#   
+#   [[build.cachebusters]]
+#     source = '(postcss|tailwind)\.config\.js'
+#     target = 'css'
+#   
+#   [[build.cachebusters]]
+#     source = 'assets/.*\.(js|ts|jsx|tsx)'
+#     target = 'js'
+
+# ============================================================================
+# LANGUAGES (Multilingual - Optional)
+# ============================================================================
+
+# [languages]
+#   [languages.en]
+#     languageName = "English"
+#     weight = 1
+#     
+#   [languages.es]
+#     languageName = "Español"
+#     weight = 2
+#     
+#     [languages.es.params]
+#       description = "Descripción en español"
+
+# ============================================================================
+# PERMALINKS
+# ============================================================================
+
+[permalinks]
+  blog = "/blog/:year/:month/:slug/"
+  # docs = "/docs/:sections[1:]/:slug/"
+
+# ============================================================================
+# TAXONOMIES
+# ============================================================================
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
