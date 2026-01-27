@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-10-01T09:45:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2025/10/tips-for-contributing-to-open-source/</loc>
+    <lastmod>2025-10-01T09:45:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2025/09/building-cli-tools-that-users-love/</loc>
+    <lastmod>2025-09-22T14:15:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2025/09/getting-started-with-rust/</loc>
+    <lastmod>2025-09-15T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2025-09-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>

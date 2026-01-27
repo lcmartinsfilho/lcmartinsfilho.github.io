@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"><head>
-	<meta name="generator" content="Hugo 0.154.5"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
@@ -9,35 +8,41 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>My Hextra Site</title>
-  <meta name="description" content="A modern documentation site built with Hugo and Hextra" /><link rel="canonical" href="http://localhost:1313/" itemprop="url" />
+<title>Building CLI Tools That Users Love – My Hextra Site</title>
+  <meta name="description" content="Best practices for creating command-line interfaces" /><link rel="canonical" href="http://localhost:1313/blog/2025/09/building-cli-tools-that-users-love/" itemprop="url" />
 
-<meta property="og:title" content="">
+<meta property="og:title" content="Building CLI Tools That Users Love">
 <meta
   property="og:description"
   content="
-    
-      A modern documentation site built with Hugo and Hextra
-    
+    Best practices for creating command-line interfaces
   ">
 <meta
   property="og:type"
   content="
-    website
+    article
   ">
-<meta property="og:url" content="http://localhost:1313/">
+<meta property="og:url" content="http://localhost:1313/blog/2025/09/building-cli-tools-that-users-love/"><meta property="article:section" content="blog">
+
+<meta
+  property="article:published_time"
+  content="2025-09-22T14:15:00+00:00">
 
 
-  <meta itemprop="name" content="My Hextra Site">
-  <meta itemprop="description" content="title: “Luiz Carlos Martins Filho” description: “About Luiz — software engineer, Rust learner, and open-source collaborator” date: 2025-09-07T00:00:00Z draft: false 👋 Hi, I’m Luiz MartinsBased in Maringá, Paraná, Brazil, and building things that sit close to the metal or make developers happier. I’m curious about operating systems, systems programming, and practical ways to ship reliable software.
-Now: learning Rust and OS internals, and looking to contribute more to open-source projects that improve my engineering chops.">
-  <meta itemprop="datePublished" content="2025-10-01T09:45:00+00:00">
-  <meta itemprop="dateModified" content="2025-10-01T09:45:00+00:00">
-  <meta itemprop="wordCount" content="116">
+<meta
+  property="article:modified_time"
+  content="2025-09-22T14:15:00+00:00">
+
+
+
+  <meta itemprop="name" content="Building CLI Tools That Users Love">
+  <meta itemprop="description" content="Best practices for creating command-line interfaces">
+  <meta itemprop="datePublished" content="2025-09-22T14:15:00+00:00">
+  <meta itemprop="dateModified" content="2025-09-22T14:15:00+00:00">
+  <meta itemprop="wordCount" content="223">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="My Hextra Site">
-  <meta name="twitter:description" content="title: “Luiz Carlos Martins Filho” description: “About Luiz — software engineer, Rust learner, and open-source collaborator” date: 2025-09-07T00:00:00Z draft: false 👋 Hi, I’m Luiz MartinsBased in Maringá, Paraná, Brazil, and building things that sit close to the metal or make developers happier. I’m curious about operating systems, systems programming, and practical ways to ship reliable software.
-Now: learning Rust and OS internals, and looking to contribute more to open-source projects that improve my engineering chops.">
+  <meta name="twitter:title" content="Building CLI Tools That Users Love">
+  <meta name="twitter:description" content="Best practices for creating command-line interfaces">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -96,7 +101,7 @@ Now: learning Rust and OS internals, and looking to contribute more to open-sour
   title=""
   href="/blog"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center">Blog</span>
 </a><a
   title=""
@@ -136,7 +141,7 @@ Now: learning Rust and OS internals, and looking to contribute more to open-sour
   </nav>
 </div>
 
-  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
     <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:hidden hx:xl:block">
   
   <div class="hx:px-4 hx:pt-4 hx:md:hidden">
@@ -169,7 +174,7 @@ Now: learning Rust and OS internals, and looking to contribute more to open-sour
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
       
       
-          <li class=""><a
+          <li class="open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/blog/"
@@ -185,13 +190,22 @@ Now: learning Rust and OS internals, and looking to contribute more to open-sour
   >Tips for Contributing to Open Source
     </a>
               
-            </li><li class="hx:flex hx:flex-col "><a
+            </li><li class="hx:flex hx:flex-col open"><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
     href="/blog/2025/09/building-cli-tools-that-users-love/"
     
   >Building CLI Tools That Users Love
     </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#building-cli-tools-that-users-love"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Building CLI Tools That Users Love</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
@@ -276,21 +290,34 @@ Now: learning Rust and OS internals, and looking to contribute more to open-sour
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#draft-false">title: “Luiz Carlos Martins Filho”
-description: “About Luiz — software engineer, Rust learner, and open-source collaborator”
-date: 2025-09-07T00:00:00Z
-draft: false
-        </a>
-      </li></ul><ul>
-      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#-what-i-like-working-on">🧭 What I like working on
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#building-cli-tools-that-users-love">Building CLI Tools That Users Love
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#-contact">📬 Contact
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#principle-1-clear-help-text">Principle 1: Clear Help Text
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#principle-2-sensible-defaults">Principle 2: Sensible Defaults
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#principle-3-useful-error-messages">Principle 3: Useful Error Messages
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#principle-4-progress-feedback">Principle 4: Progress Feedback
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#tool-recommendations">Tool Recommendations
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#conclusion">Conclusion
         </a>
       </li></ul>
-      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/username/repo/edit/main/_index.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/username/repo/edit/main/blog/building-cli-tools.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -304,31 +331,116 @@ draft: false
 
     <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
       <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
-        
-        <div class="content">
-          <h2>title: &ldquo;Luiz Carlos Martins Filho&rdquo;
-description: &ldquo;About Luiz — software engineer, Rust learner, and open-source collaborator&rdquo;
-date: 2025-09-07T00:00:00Z
-draft: false<span class="hx:absolute hx:-mt-20" id="draft-false"></span>
-    <a href="#draft-false" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h1>👋 Hi, I’m Luiz Martins</h1><p>Based in <strong>Maringá, Paraná, Brazil</strong>, and building things that sit close to the metal or make developers happier. I’m curious about operating systems, systems programming, and practical ways to ship reliable software.</p>
-<p><strong>Now:</strong> learning Rust and OS internals, and looking to contribute more to open-source projects that improve my engineering chops.</p>
-<hr>
-<h2>🧭 What I like working on<span class="hx:absolute hx:-mt-20" id="-what-i-like-working-on"></span>
-    <a href="#-what-i-like-working-on" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li>Systems programming experiments (Rust, OS building blocks, language runtimes)</li>
-<li>Tools and docs that make engineers faster and more confident</li>
-<li>Sharing notes so others can learn alongside me</li>
-</ul>
-<hr>
-<h2>📬 Contact<span class="hx:absolute hx:-mt-20" id="-contact"></span>
-    <a href="#-contact" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li>GitHub: <a href="https://github.com/lcmartinsfilho"target="_blank" rel="noopener">@lcmartinsfilho</a></li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/lcmartinsfilho/"target="_blank" rel="noopener">in/lcmartinsfilho</a></li>
-<li>Email: <code>lcmf[at]pm.me</code></li>
-</ul>
+        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/blog/">Blog</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Building CLI Tools That Users Love</div>
+  </div>
 
-        </div>
-      </main>
+        <h1 class="hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">Building CLI Tools That Users Love</h1>
+        <div class="hx:mt-4 hx:mb-16 hx:text-gray-500 hx:dark:text-gray-400 hx:text-sm hx:flex hx:items-center hx:flex-wrap hx:gap-y-2"><span class="hx:mr-1">September 22, 2025</span></div>
+        <div class="content">
+          <h2>Building CLI Tools That Users Love<span class="hx:absolute hx:-mt-20" id="building-cli-tools-that-users-love"></span>
+    <a href="#building-cli-tools-that-users-love" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Command-line tools are a developer&rsquo;s best friend. A well-designed CLI can significantly improve productivity and developer experience. Here are some best practices.</p>
+<h3>Principle 1: Clear Help Text<span class="hx:absolute hx:-mt-20" id="principle-1-clear-help-text"></span>
+    <a href="#principle-1-clear-help-text" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Always provide comprehensive help documentation:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mytool --help
+</span></span><span class="line"><span class="cl">Usage: mytool <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>COMMAND<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">A powerful CLI tool <span class="k">for</span> developers
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Commands:
+</span></span><span class="line"><span class="cl">  build    Build your project
+</span></span><span class="line"><span class="cl">  <span class="nb">test</span>     Run tests
+</span></span><span class="line"><span class="cl">  deploy   Deploy to production
+</span></span><span class="line"><span class="cl">  <span class="nb">help</span>     Print this message
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Options:
+</span></span><span class="line"><span class="cl">  -h, --help     Print <span class="nb">help</span>
+</span></span><span class="line"><span class="cl">  -v, --version  Print version</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Principle 2: Sensible Defaults<span class="hx:absolute hx:-mt-20" id="principle-2-sensible-defaults"></span>
+    <a href="#principle-2-sensible-defaults" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Users shouldn&rsquo;t need to specify every option. Use smart defaults:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Good - works with sensible defaults</span>
+</span></span><span class="line"><span class="cl">$ mytool build
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Still flexible - can override defaults</span>
+</span></span><span class="line"><span class="cl">$ mytool build --target release --jobs <span class="m">8</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Principle 3: Useful Error Messages<span class="hx:absolute hx:-mt-20" id="principle-3-useful-error-messages"></span>
+    <a href="#principle-3-useful-error-messages" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Error messages should guide users toward solutions:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Error: Config file not found at ~/.mytool/config.yaml
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Did you mean to:
+</span></span><span class="line"><span class="cl">  1. Create a config: mytool init
+</span></span><span class="line"><span class="cl">  2. Specify a custom path: mytool --config /path/to/config.yaml</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Principle 4: Progress Feedback<span class="hx:absolute hx:-mt-20" id="principle-4-progress-feedback"></span>
+    <a href="#principle-4-progress-feedback" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Long-running operations should provide feedback:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mytool deploy
+</span></span><span class="line"><span class="cl"><span class="o">[</span>████████░░<span class="o">]</span> Building... <span class="o">(</span>60%<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>██████████<span class="o">]</span> Testing... <span class="o">(</span>100%<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>██████████<span class="o">]</span> Deploying... <span class="o">(</span>100%<span class="o">)</span>
+</span></span><span class="line"><span class="cl">✓ Deployment successful</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Tool Recommendations<span class="hx:absolute hx:-mt-20" id="tool-recommendations"></span>
+    <a href="#tool-recommendations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>Rust</strong>: <code>clap</code> for argument parsing, <code>indicatif</code> for progress bars</li>
+<li><strong>Python</strong>: <code>click</code> or <code>typer</code> for CLI frameworks</li>
+<li><strong>Go</strong>: <code>cobra</code> or <code>urfave/cli</code> for CLI applications</li>
+</ul>
+<h3>Conclusion<span class="hx:absolute hx:-mt-20" id="conclusion"></span>
+    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Great CLI tools are invisible—users can accomplish their goals without thinking about the tool itself. Focus on clarity, consistency, and helpful feedback.</p>
+
+        </div><div class="hx:mt-16"></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/blog/2025/09/getting-started-with-rust/"
+        title="Getting Started with Rust"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Getting Started with Rust</a><a
+        href="/blog/2025/10/tips-for-contributing-to-open-source/"
+        title="Tips for Contributing to Open Source"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
+      >Tips for Contributing to Open Source<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div></main>
     </article>
   </div>
 
