@@ -1,5 +1,5 @@
 ---
-title: "Luiz Carlos Martins Filho"
+title: "About me"
 description: "About Luiz — software engineer, Rust learner, and open-source collaborator"
 date: 2025-09-07T00:00:00Z
 draft: false
