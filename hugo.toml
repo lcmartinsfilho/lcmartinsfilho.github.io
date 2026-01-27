@@ -4,7 +4,7 @@
 
 # Basic site settings
 baseURL = "https://example.com/"
-title = "My Hextra Site"
+title = "Blog do Luiz"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 
