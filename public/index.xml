@@ -1,11 +1,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Hextra Site – </title>
+    <title>My Hextra Site – Luiz Carlos Martins Filho</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My Hextra Site</description>
+    <description>Recent content in Luiz Carlos Martins Filho on My Hextra Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Oct 2025 09:45:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
