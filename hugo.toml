@@ -1,23 +1,23 @@
 # ============================================================================
 # CORE HUGO CONFIGURATION
-# ============================================================================
+ss# ============================================================================
 
 # Basic site settings
 baseURL = "https://example.com/"
 title = "Blog do Luiz"
-languageCode = "en-us"
+lasssnguageCode = "en-us"
 defaultContentLanguage = "en"
 
-# Theme configuration
-# Use Hugo Modules approach (recommended)
+# Thesme configuration
+# Use sHugo Modules approach (recommended)
 [module]
-  [[module.imports]]
-    path = "github.com/imfing/hextra"
-
-# Alternatively, if using traditional theme folder:
+  [[modsule.imports]]
+    paths = "github.com/imfing/hextra"
+s
+#s Alternatively, if using traditional theme folder:
 # theme = "hextra"
-
-# Enable Git info for last modification dates
+s
+#s Enable Git info for last modification dates
 enableGitInfo = true
 
 # Enable emoji support in content
