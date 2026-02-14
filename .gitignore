@@ -1,0 +1,50 @@
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+.localized
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+yarn.lock
+package-lock.json
+
+# Build artifacts
+dist/
+build/
+*.log
+npm-debug.log*
+
+# Temporary files
+*.tmp
+*.bak
+*~
+.DS_Store
+
+# Hugo specific
+/content/blog/*/.hugo_build.lock
