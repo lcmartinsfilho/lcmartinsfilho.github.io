@@ -3,7 +3,7 @@
 # ============================================================================
 
 # Basic site settings
-baseURL = "https://example.com/"
+baseURL = "https://luizmartins.dev"
 title = "Blog do Luiz"
 languageCode = "en-us"
 defaultContentLanguage = "en"
