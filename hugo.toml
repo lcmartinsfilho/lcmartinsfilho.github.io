@@ -64,19 +64,14 @@ enableRobotsTXT = true
 
 # Main navigation (top-right menu)
 [[menu.main]]
-  name = "Documentation"
-  pageRef = "/docs"
-  weight = 1
-
-[[menu.main]]
   name = "Blog"
   pageRef = "/blog"
   weight = 2
 
-[[menu.main]]
-  name = "About"
-  pageRef = "/about"
-  weight = 3
+#[[menu.main]]
+#  name = "About"
+#  pageRef = "/about"
+#  weight = 3
 
 [[menu.main]]
   name = "Search"
@@ -86,7 +81,7 @@ enableRobotsTXT = true
 
 [[menu.main]]
   name = "GitHub"
-  url = "https://github.com/username/repo"
+  url = "https://github.com/lcmartinsfilho"
   weight = 5
   [menu.main.params]
     icon = "github"
@@ -129,10 +124,10 @@ enableRobotsTXT = true
 # SERVICES INTEGRATION
 # ============================================================================
 
-[services]
-  # Google Analytics
-  [services.googleAnalytics]
-    ID = "G-MEASUREMENT_ID"  # Replace with your GA4 ID
+#[services]
+#  # Google Analytics
+#  [services.googleAnalytics]
+#    ID = "G-MEASUREMENT_ID"  # Replace with your GA4 ID
 
 # ============================================================================
 # THEME PARAMETERS
@@ -150,7 +145,7 @@ enableRobotsTXT = true
     displayTitle = true
     displayLogo = true
     # full (100%), wide (90rem), normal (1280px)
-    width = "normal"
+    width = "full"
     
     [params.navbar.logo]
       path = "images/logo.svg"
