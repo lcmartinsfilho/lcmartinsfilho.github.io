@@ -63,10 +63,10 @@ enableRobotsTXT = true
 # ============================================================================
 
 # Main navigation (top-right menu)
-[[menu.main]]
-  name = "Blog"
-  pageRef = "/blog"
-  weight = 2
+#[[menu.main]]
+#  name = "Blog"
+#  pageRef = "/blog"
+#  weight = 2
 
 #[[menu.main]]
 #  name = "About"
