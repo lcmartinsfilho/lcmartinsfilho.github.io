@@ -22,10 +22,10 @@ jobs:
       GO_VERSION: 1.25.0
       HUGO_VERSION: 0.149.0
       NODE_VERSION: 22.18.0
-      TZ: Europe/Oslo
+      TZ: America/Sao_Paulo
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
@@ -91,7 +91,7 @@ jobs:
           path: ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
   deploy:
