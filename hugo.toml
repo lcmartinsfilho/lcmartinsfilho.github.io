@@ -35,7 +35,7 @@ enableRobotsTXT = true
 # ============================================================================
 
 [outputs]
-  home = ["html", "rss", "llms"]  # llms.txt for AI agents
+  home = ["html", "rss"] #, "llms"]  # llms.txt for AI agents
   page = ["html"]
   section = ["html", "rss"]
 
