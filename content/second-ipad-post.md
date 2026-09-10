@@ -1,7 +1,7 @@
 ---
 title: "Testando a criação de posts no iPad (segunda vez)"
 description: "Criando um artigo simples usando o app iSH"
-date: 2026-09-10T23:00:00Z
+date: 2026-09-10T23:23:00Z
 draft: false
 tags: ["iPad", "iSH"]
 ---
