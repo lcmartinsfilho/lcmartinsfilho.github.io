@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content=" ">
+    <meta name="description" content="{{ .Site.Params.description | default .Site.Title }}">
+    {{ with .OutputFormats.Get "json" -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
+    {{- end }}
+    <meta name="generator" content="Hugo 0.166.0">
+
+    {{ $style := resources.Get "css/weblog.css" }}
+    {{ if $style }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen" charset="utf-8" />
+    {{ else }}
+    <link rel="stylesheet" href="https://luizmartins.dev/css/weblog.css" media="screen" charset="utf-8" />
+    {{ end }}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/css/lightgallery.min.css" type="text/css" />
+
+    {{ $webfont := resources.Get "fonts/webfont.css" }}
+    {{ if $webfont }}
+    <link rel="stylesheet" href="{{ $webfont.RelPermalink }}" media="screen" charset="utf-8" />
+    {{ end }}
+
+    <title>{{ .Title }}{{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+  </head>
+  <body class="site">
+
+<header>
+  <nav>
+    <h1><a href="/">{{ .Site.Params.author | default "@" }}</a>'s {{ .Site.Title }}.</h1>
+    <div class="menu">
+			{{ with .Site.Menus.main }}
+			<ul>
+				{{ range . }}
+				<li>
+					<a href="{{ .URL }}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+			</ul>
+			{{ end }}
+    </div>
+  </nav>
+
+
+</header>
+
+  <main class="content list">
+    {{ .Content }}
+
+    {{ range (.Site.GetPage "/post").Pages.ByDate.Reverse }}
+    <div class="post-item">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+      {{ if .Description }}
+      <p>{{ .Description }}</p>
+      {{ else }}
+      <p>{{ .Summary }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+
+<div class="pagination">
+
+</div>
+
+  </main>
+
+<footer>
+  <div class="footer_text">
+    <div>
+      <h3>Hi, <a href="">I'm </a></h3>
+      <p>
+        Here you can place a short bio about yourself. Place a `bio.html` file in your
+project directory under `layout/partials`. That will override this message.
+
+      </p>
+    </div>
+
+  </div>
+
+
+</footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.2.14/js/lightgallery-all.min.js" charset="utf-8"></script>
+    <script src="/js/weblog.js" charset="utf-8"></script>
+
+
+    {{ if .Site.Params.flickr }}
+    <script type="text/javascript">
+
+
+  $(function() {
+
+    $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?id={{ .Site.Params.flickr }}&format=json&jsoncallback=?", function(data) {
+      iweblog.application.displayImages(data, 8);
+    });
+  });
+
+</script>
+    {{ end }}
+  </body>
+</html>
