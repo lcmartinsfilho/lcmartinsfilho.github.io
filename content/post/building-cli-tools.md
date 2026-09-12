@@ -3,6 +3,7 @@ title: "Building CLI Tools That Users Love"
 description: "Best practices for creating command-line interfaces"
 date: 2025-09-22T14:15:00Z
 draft: false
+categories: ["Software Engineering", "Tooling"]
 ---
 
 ## Building CLI Tools That Users Love

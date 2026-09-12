@@ -3,6 +3,7 @@ title: "Repositório de ideias"
 description: "Um espaço pessoal para documentar leituras, pensamentos e interesses"
 date: 2025-07-12T00:00:00Z
 draft: false
+categories: ["Blogging", "Readings"]
 ---
 
 Este blog funciona como um repositório de tudo quanto estou lendo, pensando ou que me interessa. É um retorno à tradição dos blogs pessoais da era anterior às redes sociais, onde cada pessoa mantinha seu próprio espaço na internet.

@@ -4,6 +4,7 @@ description: "Blog em desenvolvimento com novas publicações em breve"
 date: 2025-07-11T00:00:00Z
 draft: false
 tags: ["News"]
+categories: ["News"]
 ---
 
 Bem-vindo ao Blog do Luiz!

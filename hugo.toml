@@ -62,6 +62,11 @@ enableRobotsTXT = true
   url = "https://github.com/lcmartinsfilho"
   weight = 5
 
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 10
+
 # ============================================================================
 # SERVICES INTEGRATION
 # ============================================================================
@@ -80,7 +85,7 @@ enableRobotsTXT = true
   description = "Articles on software engineering, systems programming, and open-source"
   showcopyright = true
   rssenabled = true
-  rsssections = ["post"]
+  rsssections = ["Blog"]
 
   # Uncomment to enable webmention.io support (requires registering the domain there first)
   # webmentionEndpoint = "https://webmention.io/luizmartins.dev/webmention"

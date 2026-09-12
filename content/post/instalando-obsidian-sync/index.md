@@ -3,6 +3,7 @@ title: "Sincronizando seu Obsidian"
 description: "Usando Obsidian Live-Sync para sincronizar seu Obsidian rapidamente"
 date: 2026-01-17T14:15:00Z
 draft: false
+categories: ["Tooling", "Tutorials"]
 ---
 
 Existem várias formas de sincronizar o Obsidian, mas decidi documentar o método que escolhi, tanto para não esquecer os detalhes no futuro quanto para ajudar quem também busca uma solução própria de sincronização.

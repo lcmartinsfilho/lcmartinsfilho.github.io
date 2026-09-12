@@ -3,6 +3,7 @@ title: "Tips for Contributing to Open Source"
 description: "How to make meaningful contributions to open-source projects"
 date: 2025-10-01T09:45:00Z
 draft: false
+categories: ["Open Source", "Software Engineering"]
 ---
 
 ## Tips for Contributing to Open Source

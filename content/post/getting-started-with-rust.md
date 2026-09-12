@@ -3,6 +3,7 @@ title: "Getting Started with Rust"
 description: "A practical guide to beginning your Rust journey"
 date: 2025-09-15T10:30:00Z
 draft: false
+categories: ["Systems Programming", "Rust"]
 ---
 
 ## Getting Started with Rust

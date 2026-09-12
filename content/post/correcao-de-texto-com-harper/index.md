@@ -3,6 +3,7 @@ title: "Correção de texto com Harper"
 description: "Um verificador gramatical desenvolvido pela Automattic usando Rust, com foco em privacidade e desempenho"
 date: 2026-01-18T00:00:00Z
 draft: false
+categories: ["Tooling"]
 ---
 
 Luiz recentemente recebeu uma recomendação sobre [Harper](https://writewithharper.com/), uma nova ferramenta de verificação gramatical desenvolvida pela [Automattic](https://automattic.com/) usando Rust.

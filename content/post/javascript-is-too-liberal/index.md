@@ -4,6 +4,7 @@ description: "Reflexões sobre a natureza permissiva do JavaScript como linguage
 date: 2025-07-26T00:00:00Z
 draft: false
 tags: ["Eloquent Javascript", "My readings"]
+categories: ["Readings", "Software Engineering"]
 ---
 
 ![Featured Image](featured.jpg)
