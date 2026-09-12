@@ -1,0 +1,42 @@
+<header>
+  <nav>
+    <h1><a href="/">@{{ .Site.Params.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
+    <div class="menu">
+		{{ if isset .Site.Params "rsssections" }}
+			{{ $.Scratch.Add "sections" .Site.Params.rsssections }}
+			<ul>
+				{{ range .Site.Menus.main }}
+				<li>
+					<a href="{{.URL}}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+				{{ range .Site.Menus.main }}
+					{{ if in ($.Scratch.Get "sections") .Name }}
+						<li><a href="{{.URL}}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a></li>
+					{{ end }}
+				{{ end }}
+			</ul>
+		{{ else }}
+			<ul>
+				{{ range .Site.Menus.main }}
+				<li>
+					<a href="{{.URL}}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+			</ul>
+      	{{ end }}
+    </div>
+  </nav>
+
+  {{ if .Params.useMermaid }}
+     <!-- Load mermaid.js when "useMermaid = true" set in content front matter -->
+     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.3/dist/mermaid.min.js"></script>
+     <script>
+       mermaid.initialize({ startOnLoad: true });
+     </script>
+
+  {{ end }}
+
+</header>
