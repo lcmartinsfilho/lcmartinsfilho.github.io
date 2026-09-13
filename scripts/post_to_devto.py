@@ -147,6 +147,8 @@ def http_json(url, payload, api_key):
     )
     req.add_header("Content-Type", "application/json")
     req.add_header("api-key", api_key)
+    # dev.to's Cloudflare front end 403s Python's default urllib User-Agent.
+    req.add_header("User-Agent", "lcmartinsfilho.github.io-blog-bot/1.0")
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             return json.loads(resp.read().decode("utf-8"))
