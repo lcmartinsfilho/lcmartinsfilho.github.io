@@ -7,4 +7,20 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
+
+  /* Language switcher: keep it visually distinct from the main menu. */
+  nav ul.langs {
+    justify-content: center;
+    margin-top: 0.25rem;
+  }
+  nav ul.langs > li a {
+    font-size: 0.75rem;
+    text-transform: none;
+    letter-spacing: normal;
+    padding: 0.25rem 0.5rem;
+  }
+  nav ul.langs > li a.active {
+    color: var(--color-link);
+    font-weight: 700;
+  }
 </style>

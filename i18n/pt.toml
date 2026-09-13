@@ -1,0 +1,32 @@
+[about]
+other = "Sobre"
+
+[posted_on]
+other = "Publicado em"
+
+[continue_reading]
+other = "Continuar lendo"
+
+[on]
+other = "em"
+
+[in]
+other = "em"
+
+[footer_greeting]
+other = "Olá, eu sou"
+
+[made_in]
+other = "Feito em"
+
+[bio]
+other = "Engenheiro de software escrevendo sobre programação de sistemas, ferramentas e código aberto."
+
+[not_found]
+other = "Página não encontrada"
+
+[rss]
+other = "Feed RSS"
+
+[home]
+other = "Voltar ao início"

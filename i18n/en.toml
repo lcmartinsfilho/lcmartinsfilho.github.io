@@ -1,0 +1,32 @@
+[about]
+other = "About"
+
+[posted_on]
+other = "Posted on"
+
+[continue_reading]
+other = "Continue Reading"
+
+[on]
+other = "on"
+
+[in]
+other = "in"
+
+[footer_greeting]
+other = "Hi, I'm"
+
+[made_in]
+other = "Made in"
+
+[bio]
+other = "Software engineer writing about systems programming, tooling, and open-source."
+
+[not_found]
+other = "Page not found"
+
+[rss]
+other = "RSS feed"
+
+[home]
+other = "Go home"

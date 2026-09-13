@@ -1,5 +1,4 @@
 ---
-title: "Blog"
 description: "Articles on software engineering, systems programming, and open-source"
 draft: false
 ---

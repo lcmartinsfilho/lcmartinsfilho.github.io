@@ -1,0 +1,32 @@
+{{ partial "site_header.html" . }}
+{{ partial "page_header.html" . }}
+
+  <main class="content">
+    <article class="post">
+      <header>
+        {{ if (not (isset .Params "externalurl")) }}
+          <h2><a rel="full-article" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ else }}
+          <h2><a rel="remote-article" href="{{ .Params.externalurl }}">→ {{ .Title }}</a> <a href="{{ .Permalink }}">∞</a></h2>
+        {{ end }}
+        <div class="postmeta">{{ i18n "posted_on" }} <time datetime="{{ .Date }}">{{ .Date | time.Format "January 2, 2006" }}</time>
+          {{ if isset .Params "categories" }}
+            {{ i18n "in" }}
+            <span class="categories">
+              {{ range $i, $v := .Params.categories }}
+                <a class="category" href="{{ printf "/categories/%s/" ($v | urlize) | relLangURL }}">{{ $v }}</a>{{ if ne (len $.Params.categories) (add $i 1) }}, {{ end }}
+              {{ end }}
+            </span>
+          {{ end }}
+        </div>
+        <div class="bubbles-vote"></div>
+        <script src="https://bubbles.town/vote.js" defer></script>
+      </header>
+      <div class="content-body prose">
+        {{ .Content }}
+      </div>
+    </article>
+  </main>
+
+{{ partial "page_footer.html" . }}
+{{ partial "site_footer.html" . }}

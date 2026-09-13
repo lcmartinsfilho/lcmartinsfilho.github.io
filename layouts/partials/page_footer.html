@@ -1,0 +1,23 @@
+<footer>
+  <div class="footer_text">
+    <div>
+      <h3>{{ i18n "footer_greeting" }} <a href="{{ .Site.Params.Author.aboutpage | relLangURL }}">{{ .Site.Params.Author.firstname }}</a></h3>
+      <p>
+        {{ partial "bio.html" . }}
+      </p>
+    </div>
+    {{ if isset .Site.Params.Author "flickrid" | and ( not ( eq .Site.Params.Author.flickrid "" ) ) }}
+      <div>
+        <h3><a href="https://www.flickr.com/photos/{{ .Site.Params.Author.flickrid }}/">Photo Stream</a></h3>
+        <div id="photos"></div>
+      </div>
+    {{ end }}
+  </div>
+
+  {{ if .Site.Params.showcopyright }}
+    <div class="footer_copyright">
+      &copy; {{ now.Format "2006" }} <a href="{{ .Site.Params.Author.aboutpage | relLangURL }}">{{ .Site.Params.Author.firstname }} {{ .Site.Params.Author.lastname }}</a>
+      {{ with .Site.Params.Author.location }} - {{ i18n "made_in" }} {{ . }}{{ end }}
+    </div>
+  {{ end }}
+</footer>

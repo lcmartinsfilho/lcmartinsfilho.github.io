@@ -1,33 +1,37 @@
 <header>
   <nav>
-    <h1><a href="/">@{{ .Site.Params.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
+    <h1><a href="{{ "" | relLangURL }}">@{{ .Site.Params.Author.handle }}’s {{ .Site.Title }}.</a></h1>
     <div class="menu">
-		{{ if isset .Site.Params "rsssections" }}
-			{{ $.Scratch.Add "sections" .Site.Params.rsssections }}
-			<ul>
-				{{ range .Site.Menus.main }}
-				<li>
-					<a href="{{.URL}}">{{ .Name }}</a>
-				</li>
-				{{ end }}
-				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
-				{{ range .Site.Menus.main }}
-					{{ if in ($.Scratch.Get "sections") .Name }}
-						<li><a href="{{.URL}}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a></li>
-					{{ end }}
-				{{ end }}
-			</ul>
-		{{ else }}
-			<ul>
-				{{ range .Site.Menus.main }}
-				<li>
-					<a href="{{.URL}}">{{ .Name }}</a>
-				</li>
-				{{ end }}
-				{{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
-			</ul>
-      	{{ end }}
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+        {{ with .Site.Params.Author.aboutpage }}<li><a href="{{ . | relLangURL }}">{{ i18n "about" }}</a></li>{{ end }}
+        {{ with .OutputFormats.Get "RSS" }}<li><a href="{{ .RelPermalink }}"><img src="/img/rss.svg" class="rss-icon" alt="{{ i18n "rss" }}" /></a></li>{{ end }}
+      </ul>
     </div>
+    <ul class="langs">
+      {{ range sort .Site.Home.AllTranslations "Language.Weight" }}
+        {{ $lang := .Language.Lang }}
+        {{ $target := "" }}
+        {{ if eq $lang $.Lang }}
+          {{ $target = $.Permalink }}
+        {{ else }}
+          {{ range $.Translations }}
+            {{ if eq .Language.Lang $lang }}{{ $target = .Permalink }}{{ end }}
+          {{ end }}
+        {{ end }}
+      <li>
+        {{ if $target }}
+        <a href="{{ $target }}"{{ if eq $lang $.Lang }} class="active"{{ end }}>{{ .Language.Label }}</a>
+        {{ else }}
+        <a href="{{ .Permalink }}">{{ .Language.Label }}</a>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
   </nav>
 
   {{ if .Params.useMermaid }}
@@ -36,7 +40,5 @@
      <script>
        mermaid.initialize({ startOnLoad: true });
      </script>
-
   {{ end }}
-
 </header>
