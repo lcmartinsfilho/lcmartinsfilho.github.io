@@ -158,3 +158,29 @@ jobs:
           git add scripts/mastodon-posted.json
           git diff --cached --quiet || git commit -m "chore: record posts published to Mastodon [skip ci]"
           git push
+  devto:
+    runs-on: ubuntu-latest
+    needs: mastodon
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Post tagged articles to dev.to
+        env:
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+        run: python3 scripts/post_to_devto.py
+      - name: Record published posts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/devto-posted.json
+          git diff --cached --quiet || git commit -m "chore: record posts published to dev.to [skip ci]"
+          git push
