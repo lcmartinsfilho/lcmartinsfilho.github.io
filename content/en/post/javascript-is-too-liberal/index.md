@@ -3,7 +3,7 @@ title: "JavaScript is (too) liberal"
 description: "Reflections on the permissive nature of JavaScript as a programming language"
 date: 2025-07-26T00:00:00Z
 draft: false
-tags: ["Eloquent Javascript", "My readings"]
+tags: ["Eloquent Javascript", "My readings", "devto"]
 categories: ["Readings", "Software Engineering"]
 ---
 

@@ -3,6 +3,7 @@ title: "Text correction with Harper"
 description: "A grammar checker developed by Automattic using Rust, with a focus on privacy and performance"
 date: 2026-01-18T00:00:00Z
 draft: false
+tags: ["devto"]
 categories: ["Tooling"]
 ---
 

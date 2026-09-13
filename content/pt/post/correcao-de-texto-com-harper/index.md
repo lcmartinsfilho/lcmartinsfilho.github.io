@@ -3,6 +3,7 @@ title: "Correção de texto com Harper"
 description: "Um verificador gramatical desenvolvido pela Automattic usando Rust, com foco em privacidade e desempenho"
 date: 2026-01-18T00:00:00Z
 draft: false
+tags: ["devto"]
 categories: ["Tooling"]
 ---
 

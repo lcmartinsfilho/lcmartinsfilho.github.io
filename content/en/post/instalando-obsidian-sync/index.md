@@ -3,6 +3,7 @@ title: "Syncing your Obsidian"
 description: "Using Obsidian Live-Sync to sync your Obsidian quickly"
 date: 2026-01-17T14:15:00Z
 draft: false
+tags: ["devto"]
 categories: ["Tooling", "Tutorials"]
 ---
 
