@@ -11,12 +11,5 @@ jobs:
         env:
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
         run: |
-          curl -s "https://dev.to/api/articles/me/all" \
-            -H "api-key: $DEVTO_API_KEY" \
-            -H "User-Agent: lcmartinsfilho.github.io-blog-bot/1.0" \
-            | python3 -c "
-import json, sys
-articles = json.load(sys.stdin)
-for a in articles:
-    print(f\"id={a['id']} published={a['published']} title={a['title']!r} url={a.get('url')} canonical_url={a.get('canonical_url')}\")
-"
+          curl -s "https://dev.to/api/articles/me/all" -H "api-key: $DEVTO_API_KEY" -H "User-Agent: lcmartinsfilho.github.io-blog-bot/1.0" > /tmp/articles.json
+          python3 -c "import json; [print(f\"id={a['id']} published={a['published']} title={a['title']!r} url={a.get('url')} canonical_url={a.get('canonical_url')}\") for a in json.load(open('/tmp/articles.json'))]"
