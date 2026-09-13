@@ -10,5 +10,3 @@ categories: ["Readings", "Software Engineering"]
 ![Featured Image](featured.jpg)
 
 JavaScript é uma linguagem notavelmente permissiva, o que pode ser tanto uma bênção quanto uma maldição para desenvolvedores. Esta publicação explora os aspectos liberais da linguagem e suas implicações para a qualidade do código e experiência do desenvolvedor.
-
-> Mais conteúdo em breve...
