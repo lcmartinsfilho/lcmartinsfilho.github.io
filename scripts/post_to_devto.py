@@ -24,6 +24,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -141,7 +142,7 @@ def absolutize_images(body, post_url):
     return re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", repl, body)
 
 
-def http_json(url, payload, api_key):
+def http_json(url, payload, api_key, retries=3):
     req = urllib.request.Request(
         url, data=json.dumps(payload).encode("utf-8"), method="POST"
     )
@@ -149,12 +150,18 @@ def http_json(url, payload, api_key):
     req.add_header("api-key", api_key)
     # dev.to's Cloudflare front end 403s Python's default urllib User-Agent.
     req.add_header("User-Agent", "lcmartinsfilho.github.io-blog-bot/1.0")
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", "replace")
-        sys.exit(f"dev.to request to {url} failed: {exc.code} {detail}")
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            if exc.code == 429 and attempt < retries - 1:
+                wait = int(exc.headers.get("Retry-After", "30"))
+                print(f"Rate limited, waiting {wait}s before retrying...")
+                time.sleep(wait)
+                continue
+            detail = exc.read().decode("utf-8", "replace")
+            sys.exit(f"dev.to request to {url} failed: {exc.code} {detail}")
 
 
 def publish(api_key, title, description, body_markdown, tags, canonical_url):
@@ -208,19 +215,19 @@ def main():
         if not api_key:
             sys.exit("DEVTO_API_KEY must be set.")
 
-    for date, slug, lang, title, description, body, url in pending:
+    for i, (date, slug, lang, title, description, body, url) in enumerate(pending):
         meta = posts[slug][lang][0]
         tags = build_tags(meta)
         body_markdown = absolutize_images(body, url)
         if args.dry_run:
             print(f"[dry-run] would post ({lang}/{slug}) tags={tags} canonical={url}")
             continue
+        if i > 0:
+            time.sleep(30)  # dev.to rate-limits article creation
         publish(api_key, title, description, body_markdown, tags, url)
         state[slug] = {"lang": lang, "url": url}
-        print(f"Posted to dev.to: {url}")
-
-    if not args.dry_run:
         save_state(state)
+        print(f"Posted to dev.to: {url}")
 
 
 if __name__ == "__main__":
