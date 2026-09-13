@@ -54,6 +54,11 @@ enableRobotsTXT = true
     url = "https://github.com/lcmartinsfilho"
     weight = 30
 
+  [[languages.pt.menus.main]]
+    name = "Links"
+    url = "https://linktr.ee/lcmartinsfilho"
+    weight = 40
+
 [languages.en]
   contentDir = "content/en"
   locale = "en-US"
@@ -78,6 +83,11 @@ enableRobotsTXT = true
     name = "GitHub"
     url = "https://github.com/lcmartinsfilho"
     weight = 30
+
+  [[languages.en.menus.main]]
+    name = "Links"
+    url = "https://linktr.ee/lcmartinsfilho"
+    weight = 40
 
 # ============================================================================
 # OUTPUT FORMATS
