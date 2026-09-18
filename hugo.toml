@@ -56,7 +56,7 @@ enableRobotsTXT = true
 
   [[languages.pt.menus.main]]
     name = "Links"
-    url = "https://linktr.ee/lcmartinsfilho"
+    url = "/links"
     weight = 40
 
 [languages.en]
@@ -86,7 +86,7 @@ enableRobotsTXT = true
 
   [[languages.en.menus.main]]
     name = "Links"
-    url = "https://linktr.ee/lcmartinsfilho"
+    url = "/links"
     weight = 40
 
 # ============================================================================
