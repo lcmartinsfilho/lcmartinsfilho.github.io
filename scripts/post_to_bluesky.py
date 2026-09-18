@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Post new blog articles to Bluesky.
+"""Cross-post opted-in blog articles to Bluesky.
 
 Scans content/{pt,en}/post for published (non-draft) posts, skips anything
 already recorded in the state file, and publishes the rest as Bluesky posts
-via the AT Protocol. Since the blog mirrors each article in both languages,
-posts are deduped by slug: the default-language (pt) version is preferred,
+via the AT Protocol. Only posts whose front matter `tags` list includes
+MARKER_TAG get published, since not every post on this blog should be
+cross-posted. Since the blog mirrors each article in both languages, posts
+are deduped by slug: the default-language (pt) version is preferred,
 falling back to whichever language is published first.
 
 Env vars:
@@ -36,6 +38,7 @@ LANGS = ("pt", "en")
 BASE_URL = os.environ.get("BASE_URL", "https://luizmartins.dev").rstrip("/")
 PDSHOST = os.environ.get("PDSHOST", "https://bsky.social").rstrip("/")
 MAX_LEN = 300
+MARKER_TAG = "bluesky"
 
 
 def split_front_matter(text):
@@ -50,12 +53,21 @@ def split_front_matter(text):
 def parse_front_matter(lines):
     meta = {}
     for line in lines:
+        m_list = re.match(r'^(\w+):\s*\[(.*)\]\s*$', line)
+        if m_list:
+            meta[m_list.group(1)] = re.findall(r'"([^"]*)"', m_list.group(2))
+            continue
         m = re.match(r'^(\w+):\s*"(.*)"\s*$', line)
         if not m:
             m = re.match(r'^(\w+):\s*(\S.*?)\s*$', line)
         if m:
             meta[m.group(1)] = m.group(2)
     return meta
+
+
+def has_marker(meta):
+    tags = [t.lower() for t in meta.get("tags", [])]
+    return MARKER_TAG in tags
 
 
 def collect_posts():
@@ -81,7 +93,7 @@ def collect_posts():
 def pick_variant(langs):
     for lang in (DEFAULT_LANG, *[l for l in LANGS if l != DEFAULT_LANG]):
         meta = langs.get(lang)
-        if meta and meta.get("draft", "false").lower() != "true":
+        if meta and meta.get("draft", "false").lower() != "true" and has_marker(meta):
             return lang, meta
     return None, None
 
@@ -180,7 +192,7 @@ def main():
         pending.append((date, slug, lang, title, description, url))
 
     if not pending:
-        print("No new posts to publish to Bluesky.")
+        print("No new posts tagged for Bluesky.")
         return
 
     pending.sort()
