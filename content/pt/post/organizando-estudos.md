@@ -7,4 +7,4 @@ tags: ["Livros", "Estudos", "devto", "bluesky", "mastodon"]
 categories: ["Blogging"]
 ---
 
-Entre os muitos livros que estou lendo desde o meio do ano, pretendo acrescentar mais alguns (como se já não fossem muitos!) sobre a o domínio em que trabalho (**e-commerce**), Cálculo (**just for fun**) e em preparação a uma viagem futura para São Paulo. 
+Entre os muitos livros que estou lendo desde o meio do ano, pretendo acrescentar mais alguns (como se já não fossem muitos!) sobre a o domínio em que trabalho (_e-commerce_), Cálculo (_just for fun_) e em preparação a uma viagem futura para São Paulo. 
