@@ -3,11 +3,11 @@ title: "Um Kobo, um iPhone e nenhum cabo"
 description: "sem cabo USB, enviei um EPUB do iPhone para o Kobo usando o servidor SSH do KOReader, o tethering do iPhone e o SFTP do Termius."
 date: 2026-10-29T22:40:00Z
 draft: false
-tags: ["iPhone", "Github", "Kobo", "ssh", "Koreader", "sftp", "epub"]
+tags: ["iPhone", "Github", "Kobo", "ssh", "Koreader", "sftp", "epub", "devto"]
 categories: ["Blogging"]
 ---
 
-Resumo: sem cabo USB, enviei um EPUB do iPhone para o Kobo usando o servidor SSH do KOReader, o tethering do iPhone e o SFTP do Termius. Levou cerca de meia hora, e o caminho deu certo mesmo com a pasta errada no primeiro envio.
+**Resumo**: sem cabo USB, enviei um EPUB do iPhone para o Kobo usando o servidor SSH do KOReader, o tethering do iPhone e o SFTP do Termius. Levou cerca de meia hora, e o caminho deu certo mesmo com a pasta errada no primeiro envio.
 
 ## Contexto
 
