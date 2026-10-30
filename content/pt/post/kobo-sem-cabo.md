@@ -1,6 +1,7 @@
 ---
 title: "Um Kobo, um iPhone e nenhum cabo"
 description: "sem cabo USB, enviei um EPUB do iPhone para o Kobo usando o servidor SSH do KOReader, o tethering do iPhone e o SFTP do Termius."
+feature: "img/kobo-sem-cabo-capa.png"
 date: 2026-10-29T22:40:00Z
 draft: false
 tags: ["iPhone", "Github", "Kobo", "ssh", "Koreader", "sftp", "epub", "devto"]
